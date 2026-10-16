@@ -1,0 +1,508 @@
+---
+type: SQLite-pragma-metadata
+runtime: SQLite
+title: ai_ethics metadat
+definition: SQLite Table and Column Names
+status: Stable
+resource: [OKF-new](./data/ai_ethics.db
+tags: metadata
+generated: by: {actor_type}:{actor},at: {generated_timestamp} 
+verified: by: human:gdejong,at: 2026-09-02T14:51:42.286092+00:00 
+---
+
+Database Outline for: C:///Users//gdejo//Desktop//FullStack//ai_ethics.db
+=========================================================================
+
+# Table: demo_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| id                   | Type: INTEGER    | [PK] |                |
+| gender_identity      | Type: TEXT       |      |                |
+| ethnic_identity      | Type: TEXT       |      |                |
+| disablity_status     | Type: TEXT       |      |                |
+| age_group            | Type: TEXT       |      |                |
+| sexual_orientation   | Type: TEXT       |      |                |
+| marital_status       | Type: TEXT       |      |                |
+| religious_identity   | Type: TEXT       |      |                |
+| education_level      | Type: TEXT       |      |                |
+| military_service     | Type: TEXT       |      |                |
+| working_language     | Type: TEXT       |      |                |
+
+# Table: sqlite_sequence
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| name                 | Type: TEXT/ANY (Underspecified) |      |                |
+| seq                  | Type: TEXT/ANY (Underspecified) |      |                |
+
+# Table: test_data
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| gender_identity	ethnic_identity	disablity_status	age_group	sexual_orientation	marital_status	religious_identity	education_level	military_service	working_language | Type: TEXT       |      |                |
+
+# Table: stakeholder_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| development_diversity | Type: TEXT       |      |                |
+| prototype_test       | Type: TEXT       |      |                |
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: INTEGER    |      |                |
+
+# Table: team_assess_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| team_topology        | Type: INTEGER    |      |                |
+| team_coverage        | Type: TEXT       |      |                |
+| team_autonomy        | Type: TEXT       |      |                |
+| team_plans           | Type: TEXT       |      |                |
+| team_orchestration   | Type: TEXT       |      |                |
+| team_independence    | Type: TEXT       |      |                |
+| team_resilience      | Type: TEXT       |      |                |
+| team_metrics         | Type: TEXT       |      |                |
+| team_diversity       | Type: TEXT       |      |                |
+| team_lead            | Type: TEXT       |      |                |
+| team_coherence       | Type: TEXT       |      |                |
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: INTEGER    |      |                |
+| team_members         | Type: TEXT       |      |                |
+
+# Table: vendor_type_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| vendor_tech_type     | Type: TEXT       |      |                |
+| vendor_tech_desc     | Type: TEXT       |      |                |
+| vendor_transparency  | Type: TEXT       |      |                |
+| vendor_data          | Type: TEXT       |      |                |
+| vendor_risk_policy   | Type: TEXT       |      |                |
+| vendor_provenance    | Type: TEXT       |      |                |
+| vendor_consistency   | Type: TEXT       |      |                |
+| vendor_continuity    | Type: TEXT       |      |                |
+| vendor_upgrade       | Type: TEXT       |      |                |
+| vendor_compliance    | Type: TEXT       |      |                |
+| vendor_ensure        | Type: TEXT       |      |                |
+| vendor_transparent   | Type: TEXT       |      |                |
+| vendor_security      | Type: TEXT       |      |                |
+| vendor_id            | Type: INTEGER    |      |                |
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: INTEGER    |      |                |
+
+# Table: vendor
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| vendor_id            | Type: INTEGER    | [PK] |                |
+| project_id           | Type: INTEGER    |      |                |
+| vendor_name          | Type: TEXT       |      |                |
+| contracts            | Type: BLOB       |      |                |
+| vendor_tech_type     | Type: TEXT       |      |                |
+
+# Table: risk_assess_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+| outcome_prob         | Type: TEXT       |      |                |
+| exposure_score       | Type: TEXT       |      |                |
+| likelihood_score     | Type: TEXT       |      |                |
+| gravity_score        | Type: TEXT       |      |                |
+| effort_score         | Type: TEXT       |      |                |
+| severity_score       | Type: TEXT       |      |                |
+| anonymize            | Type: INTEGER    |      |                |
+| rating_category      | Type: TEXT       |      |                |
+
+# Table: teams
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| team_name            | Type: TEXT       |      |                |
+| team_lead            | Type: TEXT       |      |                |
+| team_super           | Type: TEXT       |      |                |
+| projects             | Type: TEXT       |      |                |
+
+# Table: system_cards
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| system_card_id       | Type: INTEGER    |      |                |
+| system_card_name     | Type: TEXT       |      |                |
+| project_ids          | Type: INTEGER    |      |                |
+| team_ids             | Type: INTEGER    |      |                |
+| system_date          | Type: TEXT       |      |                |
+| system_version       | Type: TEXT       |      |                |
+| model_types          | Type: TEXT       |      |                |
+| ref_name             | Type: TEXT       |      |                |
+| citations            | Type: TEXT       |      |                |
+| license_type         | Type: TEXT       |      |                |
+| report_to            | Type: TEXT       |      |                |
+| primary_intended_use | Type: TEXT       |      |                |
+| primary_intended_endusers | Type: TEXT       |      |                |
+| out_of_scope_usecases | Type: TEXT       |      |                |
+| impact_factors       | Type: TEXT       |      |                |
+| evaluative_factors   | Type: TEXT       |      |                |
+| perfomance_measures  | Type: TEXT       |      |                |
+| decision_thresholds  | Type: TEXT       |      |                |
+| variational_approaches | Type: TEXT       |      |                |
+| datasets_training    | Type: TEXT       |      |                |
+| datasets_testing     | Type: TEXT       |      |                |
+| motivation           | Type: TEXT       |      |                |
+| preprocessing        | Type: TEXT       |      |                |
+| quantitative_analysis | Type: TEXT       |      |                |
+| ethical_considerations | Type: TEXT       |      |                |
+| caveats              | Type: TEXT       |      |                |
+| reservations         | Type: TEXT       |      |                |
+| architecture         | Type: TEXT       |      |                |
+| purpose_overview     | Type: TEXT       |      |                |
+| updates_retraining_plan | Type: TEXT       |      |                |
+| monitoring_plan      | Type: TEXT       |      |                |
+| regulatory_compliance | Type: TEXT       |      |                |
+| scalablility         | Type: TEXT       |      |                |
+| description          | Type: TEXT       |      |                |
+| model_artifact_location | Type: TEXT       |      |                |
+| problem_types        | Type: TEXT       |      |                |
+| risk_rating          | Type: TEXT       |      |                |
+| risk_rating_explanation | Type: INTEGER    |      |                |
+
+# Table: data_gov_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+| waiver_id            | Type: INTEGER    |      |                |
+| protected_id         | Type: INTEGER    |      |                |
+| anonymity_tools      | Type: TEXT       |      |                |
+| security_tools       | Type: TEXT       |      |                |
+| compliance           | Type: TEXT       |      |                |
+| oversight            | Type: TEXT       |      |                |
+| data_security_tools  | Type: TEXT       |      |                |
+| data_policy          | Type: TEXT       |      |                |
+| data_security_policy | Type: TEXT       |      |                |
+| access_ids           | Type: TEXT       |      |                |
+| qualified_reviewers  | Type: TEXT       |      |                |
+| secure_login         | Type: TEXT       |      |                |
+
+# Table: personnel_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| last_name            | Type: TEXT       |      |                |
+| first_name           | Type: TEXT       |      |                |
+| middle_init          | Type: TEXT       |      |                |
+| title                | Type: TEXT       |      |                |
+| department           | Type: TEXT       |      |                |
+| ai_teams             | Type: TEXT       |      |                |
+| organization         | Type: TEXT       |      |                |
+| stakeholder_type     | Type: TEXT       |      |                |
+| reviewer_flag        | Type: INTEGER    |      |                |
+| Anonymize_flag       | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+| roles                | Type: TEXT       |      |                |
+
+# Table: accessibility_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+| disabled_aware       | Type: TEXT       |      |                |
+| disabled_tools       | Type: TEXT       |      |                |
+| opendata             | Type: TEXT       |      |                |
+| disable_consult      | Type: TEXT       |      |                |
+| disable_represent    | Type: TEXT       |      |                |
+| outcome_fairness     | Type: INTEGER    |      |                |
+
+# Table: accountability_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+| reproducible         | Type: TEXT       |      |                |
+| verifiable           | Type: TEXT       |      |                |
+| falsifiable          | Type: TEXT       |      |                |
+| operational          | Type: TEXT       |      |                |
+| logging_tools        | Type: TEXT       |      |                |
+| traceable            | Type: TEXT       |      |                |
+| auditable            | Type: TEXT       |      |                |
+| risk_assessment      | Type: TEXT       |      |                |
+| training             | Type: TEXT       |      |                |
+| legal_training       | Type: TEXT       |      |                |
+| reviewers            | Type: TEXT       |      |                |
+| remedies             | Type: TEXT       |      |                |
+| policy_statement     | Type: TEXT       |      |                |
+| redress              | Type: TEXT       |      |                |
+| user_complaints      | Type: TEXT       |      |                |
+| escape_plan          | Type: TEXT       |      |                |
+
+# Table: communication_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+| user_disclaimer      | Type: TEXT       |      |                |
+| intended_audience    | Type: TEXT       |      |                |
+| adjust_demographics  | Type: TEXT       |      |                |
+| adjust_bias          | Type: TEXT       |      |                |
+| adjust_external      | Type: TEXT       |      |                |
+| usecases             | Type: TEXT       |      |                |
+| usecase_negative     | Type: TEXT       |      |                |
+| shortcomings         | Type: TEXT       |      |                |
+| overlooked           | Type: TEXT       |      |                |
+
+# Table: diversity_fairness_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| bias_policy          | Type: TEXT       |      |                |
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+| performance          | Type: TEXT       |      |                |
+| diligence            | Type: TEXT       |      |                |
+| diversity            | Type: TEXT       |      |                |
+| tech_tools           | Type: TEXT       |      |                |
+| test_tools           | Type: TEXT       |      |                |
+| unforeseen           | Type: TEXT       |      |                |
+| variability          | Type: TEXT       |      |                |
+| variable_metrics     | Type: TEXT       |      |                |
+| fairness_tests       | Type: TEXT       |      |                |
+| fairness_metrics     | Type: TEXT       |      |                |
+
+# Table: explainability_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+| understanding        | Type: TEXT       |      |                |
+| influence            | Type: TEXT       |      |                |
+| relevance            | Type: TEXT       |      |                |
+| alignment            | Type: TEXT       |      |                |
+| lucidity             | Type: TEXT       |      |                |
+| transparency         | Type: TEXT       |      |                |
+| pedagogy_tools       | Type: TEXT       |      |                |
+| test_tools           | Type: TEXT       |      |                |
+| semantic_tools       | Type: TEXT       |      |                |
+| blackbox             | Type: TEXT       |      |                |
+
+# Table: fria_proj_summary
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| id                   | Type: INTEGER    | [PK] |                |
+| system_name          | Type: TEXT       |      |                |
+| system_desc          | Type: TEXT       |      |                |
+| system_use_case      | Type: TEXT       |      |                |
+| system_feature_set   | Type: TEXT       |      |                |
+| team_name            | Type: TEXT       |      |                |
+| author_name          | Type: TEXT       |      |                |
+| date_updated         | Type: TEXT       |      |                |
+| reviewers            | Type: TEXT       |      |                |
+| analysis_date        | Type: TEXT       |      |                |
+| design_date          | Type: TEXT       |      |                |
+| development_date     | Type: TEXT       |      |                |
+| maintenance_date     | Type: TEXT       |      |                |
+| retire_date          | Type: TEXT       |      |                |
+| deployment_mode      | Type: TEXT       |      |                |
+| future_deploy        | Type: TEXT       |      |                |
+| future_features      | Type: TEXT       |      |                |
+| future_geography     | Type: TEXT       |      |                |
+| future_languages     | Type: TEXT       |      |                |
+| model_cards          | Type: INTEGER    |      |                |
+
+# Table: fundamental_rights_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| rights_list          | Type: TEXT       |      |                |
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+| rights_absolute      | Type: TEXT       |      |                |
+| rights_options       | Type: TEXT       |      |                |
+| ambiguous_rights     | Type: TEXT       |      |                |
+| rights_limits        | Type: TEXT       |      |                |
+| affected_parties     | Type: TEXT       |      |                |
+| utility_rights       | Type: TEXT       |      |                |
+| inalienable_rights   | Type: INTEGER    |      |                |
+
+# Table: human_agency_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+| fria_done            | Type: TEXT       |      |                |
+| trade_offs           | Type: TEXT       |      |                |
+| human_interaction    | Type: TEXT       |      |                |
+| agency               | Type: TEXT       |      |                |
+| manipulation         | Type: TEXT       |      |                |
+| disclosure           | Type: TEXT       |      |                |
+| coworker             | Type: TEXT       |      |                |
+| enhancer             | Type: TEXT       |      |                |
+| confider             | Type: TEXT       |      |                |
+| human_control_level  | Type: TEXT       |      |                |
+| learner              | Type: TEXT       |      |                |
+
+# Table: societal_eco_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| energy_development   | Type: TEXT       |      |                |
+| energy_operational   | Type: TEXT       |      |                |
+| human_attachment     | Type: INTEGER    |      |                |
+| ai_declared          | Type: INTEGER    |      |                |
+| human_risks          | Type: TEXT       |      |                |
+| societal_risks       | Type: TEXT       |      |                |
+| project_id           | Type: INTEGER    | [PK] |                |
+| date_revised         | Type: TEXT       |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+
+# Table: transparency_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| rules_used           | Type: TEXT       |      |                |
+| ml_used              | Type: TEXT       |      |                |
+| dl_used              | Type: TEXT       |      |                |
+| alg_used             | Type: TEXT       |      |                |
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: TEXT       |      |                |
+
+# Table: ai_policy
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| policy_id            | Type: TEXT       |      |                |
+| policy_name          | Type: TEXT       |      |                |
+| project_id           | Type: INTEGER    |      |                |
+| inherited_from       | Type: TEXT       |      |                |
+| conflicts_with       | Type: TEXT       |      |                |
+| target_relations     | Type: TEXT       |      |                |
+| target_sources       | Type: TEXT       |      |                |
+| assigner_finction    | Type: TEXT       |      |                |
+| assigner_assignee    | Type: TEXT       |      |                |
+| context              | Type: TEXT       |      |                |
+| constraints_pragmatic | Type: TEXT       |      |                |
+| constraints_logical  | Type: TEXT       |      |                |
+| constraints_legal    | Type: TEXT       |      |                |
+| resources            | Type: TEXT       |      |                |
+| responsible_party    | Type: TEXT       |      |                |
+| permission_rules     | Type: TEXT       |      |                |
+| prohibition_rules    | Type: TEXT       |      |                |
+| obligation_rules     | Type: TEXT       |      |                |
+| dispensation_rules   | Type: TEXT       |      |                |
+| failure_rules        | Type: TEXT       |      |                |
+
+# Table: data_risk_prob_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: INTEGER    |      |                |
+| freq_use             | Type: TEXT       |      |                |
+| exposure             | Type: TEXT       |      |                |
+| historical           | Type: TEXT       |      |                |
+| environmental        | Type: TEXT       |      |                |
+| robustness           | Type: TEXT       |      |                |
+| data_quality         | Type: TEXT       |      |                |
+| human_factor         | Type: TEXT       |      |                |
+
+# Table: harm_severity_form
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| project_id           | Type: INTEGER    |      |                |
+| preparer_id          | Type: INTEGER    |      |                |
+| date_revised         | Type: INTEGER    |      |                |
+| rights_harms         | Type: TEXT       |      |                |
+| personal_harms       | Type: TEXT       |      |                |
+| demographic_harms    | Type: TEXT       |      |                |
+| legitimacy           | Type: TEXT       |      |                |
+| impact_score         | Type: TEXT       |      |                |
+| context_sensitivity  | Type: TEXT       |      |                |
+| reversiblity         | Type: TEXT       |      |                |
+| persistence          | Type: TEXT       |      |                |
+| velocity             | Type: TEXT       |      |                |
+| transparency         | Type: TEXT       |      |                |
+| externality          | Type: TEXT       |      |                |
+
+# Table: health_proj_summary
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| id                   | Type: INTEGER    | [PK] |                |
+| system_name          | Type: TEXT       |      |                |
+| system_desc          | Type: TEXT       |      |                |
+| system_use_case      | Type: TEXT       |      |                |
+| system_feature_set   | Type: TEXT       |      |                |
+| team_name            | Type: TEXT       |      |                |
+| author_name          | Type: TEXT       |      |                |
+| date_updated         | Type: TEXT       |      |                |
+| reviewers            | Type: TEXT       |      |                |
+| analysis_date        | Type: TEXT       |      |                |
+| design_date          | Type: TEXT       |      |                |
+| development_date     | Type: TEXT       |      |                |
+| maintenance_date     | Type: TEXT       |      |                |
+| retire_date          | Type: TEXT       |      |                |
+| deployment_mode      | Type: TEXT       |      |                |
+| future_deploy        | Type: TEXT       |      |                |
+| future_features      | Type: TEXT       |      |                |
+| future_geography     | Type: TEXT       |      |                |
+| future_languages     | Type: TEXT       |      |                |
+
+# Table: model_cards
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| model_card_id        | Type: INTEGER    |      |                |
+| model_card_name      | Type: TEXT       |      |                |
+| project_ids          | Type: INTEGER    |      |                |
+| team_ids             | Type: INTEGER    |      |                |
+| model_date           | Type: INTEGER    |      |                |
+| model_version        | Type: TEXT       |      |                |
+| algorithm_types      | Type: TEXT       |      |                |
+| ref_name             | Type: TEXT       |      |                |
+| citations            | Type: TEXT       |      |                |
+| license              | Type: TEXT       |      |                |
+| report_to            | Type: TEXT       |      |                |
+| primary_intended_use | Type: TEXT       |      |                |
+| primary_intended_endusers | Type: TEXT       |      |                |
+| out_of_scope_usecases | Type: TEXT       |      |                |
+| impact_factors       | Type: TEXT       |      |                |
+| evaluative_factors   | Type: TEXT       |      |                |
+| perfomance_measures  | Type: TEXT       |      |                |
+| decision_thresholds  | Type: TEXT       |      |                |
+| variational_approaches | Type: TEXT       |      |                |
+| datasets_training    | Type: TEXT       |      |                |
+| datasets_testing     | Type: TEXT       |      |                |
+| motivation           | Type: TEXT       |      |                |
+| preprocessing        | Type: TEXT       |      |                |
+| quantitative_analysis | Type: TEXT       |      |                |
+| ethical_considerations | Type: TEXT       |      |                |
+| caveats              | Type: TEXT       |      |                |
+| reservations         | Type: TEXT       |      |                |
+| architecture         | Type: TEXT       |      |                |
+| purpose_overview     | Type: TEXT       |      |                |
+| updates_retraining_plan | Type: TEXT       |      |                |
+| monitoring_plan      | Type: TEXT       |      |                |
+| regulatory_compliance | Type: TEXT       |      |                |
+| scalablility         | Type: TEXT       |      |                |
+| description          | Type: TEXT       |      |                |
+| model_artifact_location | Type: TEXT       |      |                |
+| problem_types        | Type: TEXT       |      |                |
+| risk_rating          | Type: TEXT       |      |                |
+| risk_rating_explanation | Type: INTEGER    |      |                |
+
+# Table: Use_Case_Desc
+| Column Name          | Type             | Key  | Description    |
+|----------------------|------------------|------|----------------|
+| System_ID            | Type: INTEGER    |      |                |
+| Project_ID           | Type: INTEGER    |      |                |
+| Use_Case_Title       | Type: TEXT       |      |                |
+| Use_Case_Desc        | Type: TEXT       |      |                |
+| System_Name          | Type: TEXT       |      |                |
+| Detail_Level         | Type: TEXT       |      |                |
+| Primary_Actor        | Type: TEXT       |      |                |
+| Participants         | Type: INTEGER    |      |                |
+| Goal                 | Type: INTEGER    |      |                |
+| Follows_Use_Cases    | Type: INTEGER    |      |                |
+| Invariant            | Type: INTEGER    |      |                |
+| Precondition         | Type: INTEGER    |      |                |
+| Success_Postcondition | Type: INTEGER    |      |                |
+| Steps                | Type: INTEGER    |      |                |
+| Extensions           | Type: INTEGER    |      |                |
